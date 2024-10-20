@@ -79,23 +79,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? LoggedInWidget() : StartPageWidget(),
+          appStateNotifier.loggedIn ? HomePageWidget() : StartPageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? LoggedInWidget() : StartPageWidget(),
+              appStateNotifier.loggedIn ? HomePageWidget() : StartPageWidget(),
         ),
         FFRoute(
           name: 'Login',
           path: '/login',
           builder: (context, params) => LoginWidget(),
-        ),
-        FFRoute(
-          name: 'LoggedIn',
-          path: '/loggedIn',
-          builder: (context, params) => LoggedInWidget(),
         ),
         FFRoute(
           name: 'CreateAccount',
@@ -111,6 +106,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'AfterRegister',
           path: '/afterRegister',
           builder: (context, params) => AfterRegisterWidget(),
+        ),
+        FFRoute(
+          name: 'HomePage',
+          path: '/homePage',
+          builder: (context, params) => HomePageWidget(),
+        ),
+        FFRoute(
+          name: 'ChatBotPage',
+          path: '/chatBotPage',
+          builder: (context, params) => ChatBotPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
