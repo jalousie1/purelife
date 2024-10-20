@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "840472735229",
+    "project_id": "pure-l48q4w",
+    "storage_bucket": "pure-l48q4w.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840472735229:android:6e9c9615a0ffe808b03d94",
+        "android_client_info": {
+          "package_name": "com.mycompany.pure"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjy0HBeNWBLNgO5LFgdA4GEh3ScABC-ig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
